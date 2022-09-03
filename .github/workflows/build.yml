@@ -19,8 +19,7 @@ jobs:
           githubToken: ${{ github.token }}
 
           install: |
-            apk update
-            apk --no-cache add openjdk11-jdk=11.0.9_p11-r1
+            apk add --no-cache openjdk8
 
           run: |
             ./gradlew assemble
