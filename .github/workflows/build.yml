@@ -20,7 +20,7 @@ jobs:
 
           install: |
             apk update
-            apk --no-cache add openjdk11 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+            apk --no-cache add openjdk11-jdk=11.0.9_p11-r1
 
           run: |
             ./gradlew assemble
