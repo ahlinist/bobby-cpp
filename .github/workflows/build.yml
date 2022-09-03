@@ -4,7 +4,7 @@ jobs:
   armv6_job:
     # The host should always be Linux
     runs-on: ubuntu-latest
-    name: Build on buster armv6
+    name: Build on alpine armv6
     steps:
       - uses: actions/checkout@v2.1.0
       - uses: uraimo/run-on-arch-action@v2
@@ -12,11 +12,14 @@ jobs:
         id: runcmd
         with:
           arch: armv6
-          distro: buster
+          distro: alpine_latest
 
           # Not required, but speeds up builds by storing container images in
           # a GitHub package registry.
           githubToken: ${{ github.token }}
+          
+          setup: |
+            apk add --update openjdk11
 
           run: |
             ./gradlew assemble
