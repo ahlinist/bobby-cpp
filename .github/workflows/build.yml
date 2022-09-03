@@ -1,29 +1,29 @@
 on: [push, pull_request]
 
 jobs:
-  armv6_job:
+  armv7_job:
     # The host should always be Linux
-    runs-on: ubuntu-20.04
-    name: Build on ubuntu-20.04 armv6
+    runs-on: ubuntu-18.04
+    name: Build on ubuntu-18.04 armv7
     steps:
       - uses: actions/checkout@v2.1.0
       - uses: uraimo/run-on-arch-action@v2
         name: Run commands
-        id: build
+        id: runcmd
         with:
-          arch: armv6
-          distro: ubuntu20.04
+          arch: armv7
+          distro: ubuntu18.04
 
           # Not required, but speeds up builds by storing container images in
           # a GitHub package registry.
-          #githubToken: ${{ github.token }}
+          githubToken: ${{ github.token }}
 
           # Set an output parameter `uname` for use in subsequent steps
           run: |
-            ./gradlew assemble
+            uname -a
+            echo ::set-output name=uname::$(uname -a)
 
-        - name: Upload artifact
-          uses: actions/upload-artifact@v2
-          with:
-            name: artifacts
-            path: app/build/exe/main/debug
+      - name: Get the output
+        # Echo the `uname` output parameter from the `runcmd` step
+        run: |
+          echo "The uname output was ${{ steps.runcmd.outputs.uname }}"
