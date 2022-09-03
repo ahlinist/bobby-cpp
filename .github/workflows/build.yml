@@ -19,7 +19,7 @@ jobs:
           githubToken: ${{ github.token }}
 
           install: |
-            apk add --update openjdk11
+            apk --no-cache add openjdk11 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 
           run: |
             ./gradlew assemble
