@@ -1,0 +1,4 @@
+See file:///home/albvs/storage/programming/cpp/gradle-test/app/build/tmp/compileDebugCpp/output.txt for all output for compileDebugCpp.
+compiling app.cpp successful.
+
+Finished compileDebugCpp, see full log file:///home/albvs/storage/programming/cpp/gradle-test/app/build/tmp/compileDebugCpp/output.txt.
