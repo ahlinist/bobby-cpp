@@ -19,8 +19,11 @@ jobs:
           githubToken: ${{ github.token }}
 
           install: |
+            apk update
             apk add --no-cache openjdk8
             apk add --no-cache clang
+            apk add --no-cache gcc
+            apk add --no-cache libc-dev
 
           run: |
             ./gradlew assemble
