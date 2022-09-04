@@ -1,4 +1,0 @@
--o
-/home/albvs/storage/programming/cpp/gradle-test/app/build/exe/main/debug/app
-/home/albvs/storage/programming/cpp/gradle-test/app/build/obj/main/debug/c0rn65lkroj8p4fvz0qgmzzjr/app.o
--m64

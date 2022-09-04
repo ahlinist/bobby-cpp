@@ -1,4 +1,8 @@
-See file:///home/albvs/storage/programming/cpp/gradle-test/app/build/tmp/compileDebugCpp/output.txt for all output for compileDebugCpp.
-compiling app.cpp successful.
+See file:///home/albvs/storage/programming/cpp/bobby-cpp/app/build/tmp/compileDebugCpp/output.txt for all output for compileDebugCpp.
+compiling app.cpp failed.
+/home/albvs/storage/programming/cpp/bobby-cpp/app/src/main/cpp/app.cpp:5:10: fatal error: 'iostream' file not found
+#include <iostream>
+         ^~~~~~~~~~
+1 error generated.
 
-Finished compileDebugCpp, see full log file:///home/albvs/storage/programming/cpp/gradle-test/app/build/tmp/compileDebugCpp/output.txt.
+Finished compileDebugCpp, see full log file:///home/albvs/storage/programming/cpp/bobby-cpp/app/build/tmp/compileDebugCpp/output.txt.
