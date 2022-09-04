@@ -19,9 +19,10 @@ jobs:
           githubToken: ${{ github.token }}
 
           install: |
-            apt-get update
-            apt-get install openjdk-8-jdk
-            apt-get install clang
+            apt-get update -q -y
+            apt-get install  -q -y openjdk-8-jdk
+            apt-get install  -q -y clang
+            apt-get install  -q -y gcc
 
           run: |
             ./gradlew assemble
